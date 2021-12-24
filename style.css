@@ -1,3 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  /* Text */
+  --Very-dark-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  /* Background gradient */
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  /* Dividers */
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  background: var(--Soft-violet);
+  position: relative;
+}
+.container {
+  background: white;
+  margin: 130px 15px 20px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  border-radius: 20px;
+}
+.image {
+  position: relative;
+  top: -114px;
+}
+.image img {
+  height: 190px;
+  width: auto;
+}
+.faq {
+  border: 3px solid black;
+  padding: 20px 20px;
+  position: relative;
+  top: -60px;
+  width: 100%;
+}
+.faq h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 5px 10px 30px 10px;
+}
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.panel {
+  display: none;
+  overflow: hidden;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
