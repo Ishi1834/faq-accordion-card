@@ -136,7 +136,6 @@ body {
     clip: rect(auto, auto, auto, 5.5vw);
     */
   }
-
   .image img {
     width: 100%;
   }
@@ -173,7 +172,11 @@ body {
     width: 100%;
     padding: 1vw 0;
   }
-
+  .accordion:hover,
+  .active {
+    cursor: pointer;
+    font-weight: 700;
+  }
   .accordion img {
     margin: 0 0.4vw;
   }
