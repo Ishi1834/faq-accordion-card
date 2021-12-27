@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  position: relative;
 }
 html {
   height: 100%;
@@ -23,7 +24,7 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 12px;
   background: linear-gradient(to bottom, var(--Soft-violet), var(--Soft-blue));
-  min-height: 100%;
+  overflow: hidden;
 }
 .container {
   background-color: white;
@@ -32,8 +33,11 @@ body {
   align-items: center;
   position: relative;
   top: 38vw;
-  margin: 0 7vw;
+  margin: 0 8vw;
   border-radius: 20px;
+  height: auto;
+  min-height: 400px;
+  max-height: 470px;
 }
 .image {
   position: relative;
@@ -46,7 +50,7 @@ body {
 .bgImage {
   position: relative;
   top: -20vw;
-  height: 28vw;
+  height: 27vw;
   width: 100%;
   background: url("images/bg-pattern-mobile.svg") no-repeat center/cover;
 }
@@ -70,49 +74,127 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: white;
   color: var(--Very-dark-grayish-blue);
   font-weight: 400;
   width: 100%;
-  border-style: none;
   padding: 3vw 0;
 }
-.accordion span,
+.accordion:hover,
+.active {
+  cursor: pointer;
+  font-weight: 700;
+}
 .accordion img {
+  margin: 0 0.4vw;
 }
 .panel {
   display: none;
   overflow: hidden;
   padding: 0 0 4vw 0;
 }
+.panel.show {
+  display: block !important;
+}
 .panel p {
   color: var(--Dark-grayish-blue);
 }
 .attribution {
-  position: relative;
-  top: -35vw;
   font-size: 11px;
   text-align: center;
+  position: relative;
+  top: -25vw;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: grey;
 }
 @media (min-width: 600px) {
   .container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 12vw auto;
     top: 0;
+    height: 50vw;
+    min-height: auto;
+    max-height: auto;
+    flex-wrap: wrap;
+    width: 60vw;
+  }
+  .break {
+    flex-basis: 100%;
+    height: 0;
   }
   .image {
-    top: 0;
+    position: relative;
+    top: 6vw;
+    left: -5.5vw;
+    width: 50%;
+    /*
+    To clip an image
+    position: absolute;
+    clip: rect(auto, auto, auto, 5.5vw);
+    */
+  }
+
+  .image img {
+    width: 100%;
   }
   .bgImage {
-    top: 0;
+    position: relative;
+    top: -5vw;
+    height: 13vw;
+    width: 100%;
   }
+
   .faq {
-    top: 0;
+    position: relative;
+    top: -2vw;
+    left: -2vw;
+    width: 50%;
+    padding: 0 3vw;
+  }
+  .faq h2 {
+    text-align: left;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 0.5vw 0;
+  }
+  .ques {
+    border-bottom: 1px solid var(--Light-grayish-blue);
+  }
+  .accordion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 400;
+    width: 100%;
+    padding: 1vw 0;
+  }
+
+  .accordion img {
+    margin: 0 0.4vw;
+  }
+  .panel {
+    display: none;
+    overflow: hidden;
+    padding: 0 0 2vw 0;
+  }
+  .panel.show {
+    display: block !important;
+  }
+  .panel p {
+    color: var(--Dark-grayish-blue);
   }
   .attribution {
+    font-size: 11px;
+    text-align: center;
+    position: relative;
     top: 0;
+  }
+  .attribution a {
+    color: blue;
   }
 }
